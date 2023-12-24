@@ -3,9 +3,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import TopicPage from './pages/TopicPage'
 import LearnPage from './pages/LearnPage'
-import EmptyData from './components/EmptyData'
 
-import { decremented, incremented } from './store/store'
 import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
@@ -16,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className='flex justify-center items-center flex-col gap-4 h-screen sm:h-full'>
+      <div className='flex  items-center flex-col gap-4 h-screen sm:h-full my-12 sm:my-0'>
         <NavBar setPage={setPage} /> {/* FIX:  NavBar at the bottom when mobile screen  */}
 
         { page ? <LearnPage page={page} /> : <TopicPage page={page} /> }
