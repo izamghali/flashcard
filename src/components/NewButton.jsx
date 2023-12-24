@@ -1,6 +1,7 @@
 import React from "react"
 
-export default function NewTopic({ topics }) {
+export default function NewButton({ topics, page }) {
+
     return (
         <div>
             <a className="flex items-center gap-2 group " href="" >
@@ -13,12 +14,12 @@ export default function NewTopic({ topics }) {
                 { topics ? 
                     <span className="border-b-[1.5px] border-stone-300 border-dotted text-stone-600
                     duration-300 group-hover:text-stone-950 group-hover:border-stone-950 group-hover:border-solid">
-                       Create a new topic
+                       Create a new { page ? 'topic' : 'card deck' }
                    </span>
                 : 
                     <span className="border-b-[1.5px] border-stone-300 border-dotted text-stone-800
                         duration-300 group-hover:text-stone-950 group-hover:border-stone-950 group-hover:border-solid">
-                        Create a new topic
+                        Create a new { page ? 'card deck' : 'topic' }
                     </span>
                 }
                 

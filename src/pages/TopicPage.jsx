@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import NewTopic from "../components/NewTopic"
 import noDataImg from '../assets/no-data.png'
+import NewButton from "../components/NewButton"
 
-export default function TopicPage(props) {
+export default function TopicPage({ page }) {
 
     const [ topics, setTopics ] = useState(false) // FIX:  This should be array, not boolean
 
@@ -17,7 +17,7 @@ export default function TopicPage(props) {
                     </div>
                     
             }
-            <NewTopic topics={topics}/>
+            <NewButton topics={topics} page={page}/>
             
         </section>
     )
