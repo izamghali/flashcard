@@ -24,6 +24,12 @@ export default function TopicPage({ page }) {
             decks: 1,
             completed: false
         },
+        {
+            title: 'Sports',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            decks: 1,
+            completed: false
+        },
     ]
 
     const [ topics, setTopics ] = useState(mockupTopics)
