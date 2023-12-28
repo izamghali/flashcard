@@ -38,7 +38,7 @@ export default function NewButton({ page }) {
                 </svg>
             </button>
 
-            <div id="new-topic-form" className="bg-[rgba(0,0,0,0.5)] w-full h-full absolute left-0 top-0 justify-center items-center hidden">
+            <div id="new-topic-form" className="bg-[rgba(0,0,0,0.5)] w-full h-full fixed left-0 top-0 justify-center items-center hidden">
                 <div className="p-4 bg-white rounded-md min-w-[20rem] flex flex-col gap-4">
                     <div className="flex justify-between items-center">
                         <h3 className="font-semibold text-lg">Create a new topic</h3>

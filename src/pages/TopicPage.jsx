@@ -40,7 +40,7 @@ export default function TopicPage({ page }) {
         <section className="flex flex-col gap-6 w-full lg:max-w-[70rem] px-8">
 
             <div className="flex justify-between">
-                <div className="hidden sm:block"><NewButton page={page}/></div>
+                <NewButton page={page}/>
                 <div className="flex gap-6">
                     <button className="flex items-center gap-2 hover:bg-violet-300 p-2 rounded-md duration-200 text-stone-500 hover:text-stone-800">
                         <svg className="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
