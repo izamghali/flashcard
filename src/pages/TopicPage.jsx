@@ -42,7 +42,7 @@ export default function TopicPage({ page }) {
             <div className="flex justify-between">
                 <NewButton page={page}/>
                 <div className="flex gap-6">
-                    <button className="flex items-center gap-2 hover:bg-violet-300 p-2 rounded-md duration-200 text-stone-500 hover:text-stone-800">
+                    <button className="flex items-center gap-2 sm:hover:bg-violet-300 sm:hover:text-white p-2 rounded-md duration-200 text-stone-500 ">
                         <svg className="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
                         </svg>
