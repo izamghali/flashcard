@@ -14,7 +14,10 @@ function App() {
 
   return (
     <>
-      <div className='flex  items-center flex-col gap-4 h-screen sm:h-full my-12 sm:my-0'>
+      <div className=' bg-white 
+        flex items-center flex-col gap-4 
+        h-screen sm:pt-0 pt-10
+      '>
         <NavBar page={page} setPage={setPage} /> {/* FIX:  NavBar at the bottom when mobile screen  */}
 
         { page ? <LearnPage page={page} /> : <TopicPage page={page} /> }
