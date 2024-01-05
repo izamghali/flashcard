@@ -5,7 +5,7 @@ export default function TopicCard({ topics, view }) {
     return (
         <>
             <div>
-                <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl mb-8 select-none text-black">Available Topics</h2>
+                <h2 className="font-bold text-2xl sm:text-3xl lg:text-4xl mb-8 select-none">Available Topics</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
                     { topics.map((topic, index) => {
                         return <div 
