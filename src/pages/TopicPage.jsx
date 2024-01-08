@@ -73,23 +73,22 @@ export default function TopicPage({ page }) {
                             {/* list container */}
                             <div className="space-y-2 ">
                                 { topics.map((topic, index) => {
-                                    return <div className="group border-2 border-slate-500 rounded-md p-2 overflow-hidden relative" key={index}>
-                                            <div className="flex justify-between">
+                                    return <div className="group border-2 border-slate-500 rounded-md p-2 relative" key={index}>
+                                            <div className="flex justify-between items-center">
                                                 <h4>{topic.title}</h4>
-                                                <svg onClick={openEditOption} className="w-5 cursor-pointer group-hover:translate-x-0 translate-x-10 duration-200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-                                                </svg>
-                                            </div>
-
-                                            <div id="remove-modal" className="absolute top-0 bottom-0 right-0 flex items-center translate-y-10 duration-200
-                                                bg-slate-100 text-slate-700 p-2 rounded-md
-                                            ">
-                                                <div className="flex flex-col p-2">
-                                                    <span>edit</span>
-                                                    <span>remove</span>
-
+                                                <div className="dropdown dropdown-end">
+                                                    <div tabIndex={0} role="button" className="">
+                                                        <svg className="w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                                            <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                                                        </svg>
+                                                    </div>
+                                                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                                        <li><a>Edit</a></li>
+                                                        <li><a>Remove</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
+
 
                                         </div>
                                 }) }
@@ -101,21 +100,11 @@ export default function TopicPage({ page }) {
                                     <button className="btn">Save</button>
                                 </form>
                             </div>
+
                         </div>
                     </dialog>
 
                 </div>
-{/* 
-                <div className="w-full h-screen z-10
-                    fixed top-0 left-0 bg-[rgba(0,0,0,0.5)]
-                    flex justify-center items-center
-                ">
-                    
-                    <div className="border-2 w-40 h-40 rounded-md">
-
-                    </div>
-
-                </div> */}
                 
             </div>
 
