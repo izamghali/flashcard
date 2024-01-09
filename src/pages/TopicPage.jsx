@@ -36,18 +36,20 @@ export default function TopicPage({ page }) {
     const [ topics, setTopics ] = useState(mockupTopics)
     const [ view, setView ] = useState(false)
 
-    function openEditOption(event) {
-        const removeOption = event.target.parentElement.nextSibling
-        removeOption.classList.toggle('translate-y-10')
-    }
+    // function openEditOption(event) {
+    //     const removeOption = event.target.parentElement.nextSibling
+    //     removeOption.classList.toggle('translate-y-10')
+    // }
 
-    function dismissRemoveOption(event) {
-        // const removeModal = document.getElementById('remove-modal')
-        // removeModal.classList.remove('translate-y-0')
-        // removeModal.classList.add('translate-y-10')
-        // console.log(event);
+    function openManageOption(event) {
+        const manageOption = document.getElementById('manage-topic-modal')
+        const listContainer = event.target.parentElement.lastChild.firstChild.firstChild.nextSibling.firstChild.firstChild.lastChild.lastChild
+        // listContainer.classList.add('opacity-0')
+        manageOption.showModal()
+        console.log(invDrop);
+        console.log(event);
+        console.log(listContainer)
     }
-
 
     return (
         <section className="flex flex-col gap-6 w-full lg:max-w-[70rem] px-8">
@@ -55,7 +57,7 @@ export default function TopicPage({ page }) {
             <div className="flex justify-between">
                 <NewButton page={page}/>
                 <div className="flex gap-6">
-                    <button onClick={()=>document.getElementById('my_modal_1').showModal()} className="flex items-center gap-2 sm:hover:bg-violet-300 sm:hover:text-white p-2 rounded-md duration-200 text-stone-500 ">
+                    <button onClick={openManageOption} className="flex items-center gap-2 sm:hover:bg-violet-300 sm:hover:text-white p-2 rounded-md duration-200 text-stone-500 ">
                         <svg className="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/>
                         </svg>
@@ -64,7 +66,7 @@ export default function TopicPage({ page }) {
                     <GridListButton view={view} setView={setView}/>
 
                     {/* Open the modal using document.getElementById('ID').showModal() method */}
-                    <dialog onClick={dismissRemoveOption} id="my_modal_1" className="modal">
+                    <dialog id="manage-topic-modal" className="modal">
                         <div className="modal-box">
                             <h3 className="font-bold text-lg">Manage topics</h3>
 
@@ -77,27 +79,33 @@ export default function TopicPage({ page }) {
                                             <div className="flex justify-between items-center">
                                                 <h4>{topic.title}</h4>
                                                 <div className="dropdown dropdown-end">
-                                                    <div tabIndex={0} role="button" className="">
+
+                                                    {/* dots */}
+                                                    <div tabIndex={index} role="button" className="btn">
                                                         <svg className="w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                                                             <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
                                                         </svg>
                                                     </div>
-                                                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                                    {/* edit & remove option */}
+                                                    <ul tabIndex={index} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                                         <li><a>Edit</a></li>
                                                         <li><a>Remove</a></li>
                                                     </ul>
+
                                                 </div>
                                             </div>
-
 
                                         </div>
                                 }) }
                             </div>
                             
+                            {/* <button onClick={closeManageOption} className="btn">close</button> */}
+
                             <div className="modal-action">
                                 <form method="dialog">
                                     {/* if there is a button in form, it will close the modal */}
                                     <button className="btn">Save</button>
+                                    
                                 </form>
                             </div>
 
