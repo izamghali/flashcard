@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-    
+    .add-button {
+        @apply font-medium border-slate-300 border-2;
+    }
 }
 
 @layer base {
