@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    <section className='relative'>
+    <section className='relative sm:px-10 px-4 duration-200'>
       <QuizModal />
       <TopicModal />
 
@@ -17,7 +17,7 @@ function App() {
       <Navbar />
       <Drawer />
 
-      <div className='p-10'>
+      <div className=''>
         <Card />
 
       </div>

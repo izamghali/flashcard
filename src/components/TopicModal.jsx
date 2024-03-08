@@ -12,7 +12,7 @@ export default function TopicModal(props) {
                     <span className="label-text-alt">Think about something trending or relatable</span>
                 </div>
                 <div className="flex justify-end mt-4">
-                    <button className="btn btn-secondary w-fit px-10">Create</button>
+                    <button className="btn btn-primary w-fit px-10">Create</button>
                 </div>
             </div>
             <form method="dialog" className="modal-backdrop">
