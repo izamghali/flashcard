@@ -6,6 +6,10 @@
     .add-button {
         @apply font-medium border-slate-300 border-2;
     }
+
+    .padding-x {
+        @apply sm:px-10 px-4 duration-200;
+    }
 }
 
 @layer base {
