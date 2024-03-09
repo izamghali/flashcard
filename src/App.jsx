@@ -18,10 +18,16 @@ function App() {
       <Navbar />
       <Drawer />
 
-      <div className='pt-10 padding-x flex flex-col gap-5'>
+      <div className='
+        flex flex-col gap-8
+        padding-x
+        pt-6
+        sm:pt-8
+        xl:pt-10
+         
+      '>
 
         <TopicTitle />
-
 
         <div className='flex justify-center'>
           <Card />

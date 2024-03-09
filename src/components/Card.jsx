@@ -19,12 +19,14 @@ export default function Card(props) {
     return (
         <section className="
             grid gap-10
-            grid-cols-1
-            sm:grid-cols-2
+            grid-cols-1 w-[100%]
+            sm:grid-cols-2 
+            md:w-[90%]
             lg:grid-cols-3
             xl:grid-cols-4
         
-            border-2 border-violet-400 w-[90%]">
+            
+        ">
 
             {
                 testCard.map((card, idx) => {
